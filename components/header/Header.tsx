@@ -1,7 +1,19 @@
-import Link from 'next/link';
 import {FC, useState} from 'react';
 
-export const Header: FC = () => {
+interface Props {
+    active: boolean;
+    handleClickItemOne: () => void;
+    handleClickItemTwo: () => void;
+    handleClickItemThree: () => void;
+}
+
+
+export const Header: FC<Props> = ({ 
+    active,
+    handleClickItemOne,
+    handleClickItemTwo,
+    handleClickItemThree
+}) => {
 
     const [ menu, setMenu ] = useState(false);
 
@@ -11,34 +23,59 @@ export const Header: FC = () => {
 
   return (
     <div className='header'>
-        <div className={menu ? 'header-name header-name-blue' : 'header-name header-name-white'}>Peter Aspiazu</div>
+        {
+            active 
+            ? <div 
+                onClick={handleClickItemOne}
+                className={
+                    menu 
+                    ? 'header-name header-name-blue' 
+                    : 'header-name header-name-white'
+                }>Peter Aspiazu</div>
+            : <div 
+                onClick={handleClickItemOne}
+                className={
+                    'header-name header-active-blue'
+                }>Peter Aspiazu</div>
+        }
 
-        <button className='header-button' onClick={handleClickMenu}>
-            <div className={menu ? 'header-line-one header-line-one-transform' : 'header-line-one'}></div>
-            <div className={menu ? 'header-line-two header-line-two-opacity' : 'header-line-two'}></div>
-            <div className={menu ? 'header-line-three header-line-three-transform' : 'header-line-three'}></div>
-        </button>
+        {
+            active
+            ?<button className='header-button' onClick={handleClickMenu}>
+                <div className={menu ? 'header-line-one header-line-one-transform' : 'header-line-one menu-blue-active'}></div>
+                <div className={menu ? 'header-line-two header-line-two-opacity' : 'header-line-two menu-blue-active'}></div>
+                <div className={menu ? 'header-line-three header-line-three-transform' : 'header-line-three menu-blue-active'}></div>
+            </button>
+            :<button className='header-button' onClick={handleClickMenu}>
+                <div className={menu ? 'header-line-one header-line-one-transform' : 'header-line-one menu-blue'}></div>
+                <div className={menu ? 'header-line-two header-line-two-opacity' : 'header-line-two menu-blue'}></div>
+                <div className={menu ? 'header-line-three header-line-three-transform' : 'header-line-three menu-blue'}></div>
+            </button>
+        }
+
 
         {
             menu &&
             <div className='header-menu'>
                 <div className='header-menu-items'>
-                    <div>Resumen</div>
-                    <div>Trabajos</div>
-                    <div>Contactar</div>
+                <div onClick={handleClickItemOne}>Resumen</div>
+
+                <div onClick={handleClickItemTwo}>Trabajos</div>
+
+                <div onClick={handleClickItemThree}>Contactar</div>
                 </div>
                 <div className='header-menu-redes'>
-                    <Link href="#">
+                    <a href="https://github.com/peter-aspiazu-s" target='_blank'>
                         <img className='header-menu-img-one' src="/image/github-ico.png" alt="icono de github" />
-                    </Link>
+                    </a>
                     
-                    <Link href="#">
+                    <a href="https://www.linkedin.com/in/peter-aspiazu/" target='_blank'>
                         <img className='header-menu-img-two' src="/image/linkedin-ico.png" alt="icono de linkedin" />
-                    </Link>
+                    </a>
                     
-                    <Link href="#">
+                    <a href="https://www.instagram.com/paspiazus/" target='_blank'>
                         <img className='header-menu-three' src="/image/instagram-ico.png" alt="icono de instagram" />
-                    </Link>
+                    </a>
                 </div>
             </div>
         }

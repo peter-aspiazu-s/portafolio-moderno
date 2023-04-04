@@ -1,6 +1,17 @@
 import {FC} from 'react';
+import { useSwiperSlide } from "swiper/react";
 
-export const Form: FC = () => {
+interface Props {
+    setActive: (active: boolean) => void;
+}
+
+export const Form: FC<Props> = ({setActive}) => {
+
+    const swiperSlide = useSwiperSlide();
+
+    if(swiperSlide.isActive){
+        setActive(!swiperSlide.isActive);
+    }
 
     const handleSubmit = (e: any) => {
         e.preventDefault();

@@ -1,15 +1,16 @@
 import {FC, useState} from 'react';
+import { useSwiperSlide } from "swiper/react";
 
 const infoWorkOne = [
     {
         title: 'Proyecto para EJC',
         description: 'Este sitio web lo realice con NextJS y Material UI',
-        link: '#'
+        link: 'https://www.ejc-home.com/'
     },
     {
         title: 'Plantilla web moderna',
         description: 'Este sitio web lo realice con NextJS y css',
-        link: '#'
+        link: 'https://plantilla-moderna.vercel.app/'
     }
 ]
 
@@ -17,16 +18,26 @@ const infoWorkTwo = [
     {
         title: 'Proyecto de TodoApp',
         description: 'Esta aplicación web la realice con NextJS y css',
-        link: '#'
+        link: 'https://todo-app-gules-eta.vercel.app/'
     },
     {
         title: 'Mi Sitio Web',
         description: 'Este sitio web lo realice con NextJS y Material UI',
-        link: '#'
+        link: 'https://aspiazutechnology.vercel.app/'
     },
 ]
 
-export const Work: FC = () => {
+interface Props {
+    setActive: (active: boolean) => void;
+}
+
+export const Work: FC<Props> = ({setActive}) => {
+
+    const swiperSlide = useSwiperSlide();
+
+    if(swiperSlide.isActive){
+        setActive(!swiperSlide.isActive);
+    }
 
     const [ work, setWork ] = useState(infoWorkOne);
 

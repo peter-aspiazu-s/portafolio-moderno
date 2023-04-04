@@ -19,11 +19,29 @@ import { Footer } from '../footer';
 
 const Portfolio: FC = () => {
 
-    console.log('Hola mundo desde el front')
+  const [ active, setActive ] = useState(false);
+
+  const handleClickItemOne = () => {
+    const element = document.getElementsByClassName('swiper-pagination-bullet')[0] as HTMLElement;
+    element.click();
+  }
+  const handleClickItemTwo = () => {
+      const element = document.getElementsByClassName('swiper-pagination-bullet')[1] as HTMLElement;
+      element.click();
+  }
+  const handleClickItemThree = () => {
+      const element = document.getElementsByClassName('swiper-pagination-bullet')[2] as HTMLElement;
+      element.click();
+  }
 
   return (
     <>
-      <Header />
+      <Header 
+        active={active} 
+        handleClickItemOne={handleClickItemOne}
+        handleClickItemTwo={handleClickItemTwo}
+        handleClickItemThree={handleClickItemThree}
+      />
       <Swiper
         direction={"vertical"}
         slidesPerView={1}
@@ -35,17 +53,22 @@ const Portfolio: FC = () => {
         modules={[Mousewheel, Pagination]}
         className="mySwiper"
       >
-        <SwiperSlide>
-          <Main />
+        <SwiperSlide data-hash="slide1">
+          <Main setActive={setActive} />
         </SwiperSlide>
-        <SwiperSlide>
-          <Work />
+        <SwiperSlide data-hash="slide2">
+          <Work setActive={setActive} />
         </SwiperSlide>
-        <SwiperSlide>
-          <Form />
+        <SwiperSlide data-hash="slide3">
+          <Form setActive={setActive} />
         </SwiperSlide>
-        <SwiperSlide>
-          <Footer />
+        <SwiperSlide data-hash="slide3">
+          <Footer 
+            setActive={setActive} 
+            handleClickItemOne={handleClickItemOne}
+            handleClickItemTwo={handleClickItemTwo}
+            handleClickItemThree={handleClickItemThree}
+          />
         </SwiperSlide>
       </Swiper>
     </>

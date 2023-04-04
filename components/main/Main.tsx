@@ -1,8 +1,21 @@
 import {FC} from 'react';
+import { useSwiperSlide } from "swiper/react";
 
-export const Main: FC = () => {
+interface Props {
+    setActive: (active: boolean) => void;
+}
+
+export const Main: FC<Props> = ({setActive}) => {
+
+    const swiperSlide = useSwiperSlide();
+
+    if(swiperSlide.isActive){
+        setActive(swiperSlide.isActive);
+    }
+    
+
   return (
-    <div className='main'>
+    <div className='main' id='animationScroll'>
         <div className='main-container-info'>
             <div className='main-container-info-title'>Desarrollador Web Frontend</div>
             <div className='main-container-info-description'>Hola me gusta desarrollar interfaces de usuario, tengo conocimientos en javascript, css y html. Todo lo que he aprendido lo aplico en NextJS y es el framework que utilizo para desarrollar.</div>
