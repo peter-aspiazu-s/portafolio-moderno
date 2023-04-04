@@ -1,0 +1,216 @@
+.form{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container-text{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+}
+
+.form-container-text div:nth-child(1){
+    color: #4831d4;
+    font-size: 30px;
+    font-weight: 600;
+    margin-bottom: 25px;
+}
+
+.form-container-text div:nth-child(2){
+    margin-bottom: 50px;
+}
+
+.form-container-text div{
+    text-align: left;
+}
+
+.form-container-formulario{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container-formulario form{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.form-container-formulario-input-text, .form-container-formulario-input-email, .form-container-formulario-textarea{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.form-container-formulario-input-text label, .form-container-formulario-input-email label, .form-container-formulario-textarea label{
+    opacity: 0.4;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.form-container-formulario-input-text input, .form-container-formulario-input-email input{
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid #ababab;
+    padding-bottom: 5px;
+    margin-bottom: 25px;
+}
+
+.form-container-formulario-input-text input:focus{
+    border-bottom: 1px solid #4831d4;
+    outline: 0;
+}
+.form-container-formulario-input-email input:focus{
+    border-bottom: 1px solid #4831d4;
+    outline: 0;
+}
+
+
+.form-container-formulario-textarea textarea{
+    width: 100%;
+    border: 0;
+    border-bottom: 1px solid #ababab;
+    padding-bottom: 5px;
+    margin-bottom: 25px;
+}
+
+.form-container-formulario-textarea textarea:focus{
+    border-bottom: 1px solid #4831d4;
+    outline: 0;
+}
+
+.form-container-formulario form button{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80%;
+    background-color: transparent;
+    border: 1px solid #4831d4;
+    color: #4831d4;
+}
+
+.form-container-formulario form button svg{
+    fill: #4831d4;
+    transform: scale(0.9);
+}
+
+
+@media screen and (min-width: 768px){
+
+    .form-container-text{
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+
+    .form-container-formulario{
+        width: 700px;
+    }
+
+    .form-container-formulario form{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 30px;
+    }
+
+    .form-container-formulario-textarea{
+        grid-column: 1/3;
+    }
+
+    .form-container-formulario form button{
+        grid-column: 1/3;
+        align-self: center;
+        justify-self: center;
+        width: 300px;
+    }
+}
+
+@media screen and (min-width: 1024px){
+
+    .form-container-formulario{
+        width: 900px;
+    }
+
+    .form-container-formulario form button{
+        grid-column: 1/3;
+        align-self: center;
+        justify-self: center;
+        width: 300px;
+        cursor: pointer;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .form-container-formulario form button:hover div{
+        color: aliceblue;
+        position: relative;
+        z-index: 1;
+    }
+    .form-container-formulario form button:hover svg{
+        fill: aliceblue;
+        position: relative;
+        z-index: 1;
+    }
+
+    .form-container-formulario form button::before{
+        content: '';
+        width: 101%;
+        height: 108%;
+        pointer-events: none;
+        z-index: 1;
+        position: absolute;
+        top: -0.1em;
+        left: 0;
+        right: 0;
+        background: transparent;
+        transform: translateX(-100%);
+        transition: 0.5s;
+    }
+
+    .form-container-formulario form button:hover::before{
+        background: #4831d4;
+        transform: translateX(0);
+    }
+}
+
+
+@media screen and (min-width: 1440px){
+    .form-container-text div:nth-child(1){
+        font-size: 50px;
+    }
+
+    .form-container-text div:nth-child(2){
+        font-size: 20px;
+    }
+
+    .form-container-formulario-input-text label, .form-container-formulario-input-email label, .form-container-formulario-textarea label{
+        font-size: 20px;
+    }
+
+    .form-container-formulario-input-text input, .form-container-formulario-input-email input{
+        font-size: 20px;
+    }
+
+    .form-container-formulario-textarea textarea{
+        font-size: 20px;
+    }
+
+    .form-container-formulario form button div{
+        font-size: 17px;
+    }
+}
