@@ -18,13 +18,14 @@
 
 .form-container-text div:nth-child(1){
     color: #4831d4;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: 600;
-    margin-bottom: 25px;
+    margin-bottom: 20px;
 }
 
 .form-container-text div:nth-child(2){
-    margin-bottom: 50px;
+    font-size: 15px;
+    margin-bottom: 30px;
 }
 
 .form-container-text div{
@@ -57,7 +58,7 @@
 .form-container-formulario-input-text label, .form-container-formulario-input-email label, .form-container-formulario-textarea label{
     opacity: 0.4;
     font-size: 15px;
-    margin-bottom: 15px;
+    margin-bottom: 10px;
 }
 
 .form-container-formulario-input-text input, .form-container-formulario-input-email input{
@@ -187,6 +188,14 @@
 }
 
 @media screen and (min-width: 1024px){
+
+    .form-container-text div:nth-child(1){
+        font-size: 40px;
+    }
+    
+    .form-container-text div:nth-child(2){
+        font-size: 20px;
+    }
 
     .form-container-formulario{
         width: 900px;
