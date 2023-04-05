@@ -20,6 +20,22 @@ export const Header: FC<Props> = ({
     const handleClickMenu = () => {
         setMenu(!menu);
     }
+    
+    // hacer que se haga en una sola función
+    const handleClickResumen = () => {
+        handleClickItemOne();
+        setMenu(!menu)
+    }
+    
+    const handleClickTrabajos = () => {
+        handleClickItemTwo();
+        setMenu(!menu);
+    }
+    
+    const handleClickContactar = () => {
+        handleClickItemThree();
+        setMenu(!menu);
+    }
 
   return (
     <div className='header'>
@@ -58,22 +74,22 @@ export const Header: FC<Props> = ({
             menu &&
             <div className='header-menu'>
                 <div className='header-menu-items'>
-                <div onClick={handleClickItemOne}>Resumen</div>
+                <div onClick={handleClickResumen}>Resumen</div>
 
-                <div onClick={handleClickItemTwo}>Trabajos</div>
+                <div onClick={handleClickTrabajos}>Trabajos</div>
 
-                <div onClick={handleClickItemThree}>Contactar</div>
+                <div onClick={handleClickContactar}>Contactar</div>
                 </div>
                 <div className='header-menu-redes'>
-                    <a href="https://github.com/peter-aspiazu-s" target='_blank'>
+                    <a href="https://github.com/peter-aspiazu-s" target='_blank' onClick={() => setMenu(!menu)}>
                         <img className='header-menu-img-one' src="/image/github-ico.png" alt="icono de github" />
                     </a>
                     
-                    <a href="https://www.linkedin.com/in/peter-aspiazu/" target='_blank'>
+                    <a href="https://www.linkedin.com/in/peter-aspiazu/" target='_blank' onClick={() => setMenu(!menu)}>
                         <img className='header-menu-img-two' src="/image/linkedin-ico.png" alt="icono de linkedin" />
                     </a>
                     
-                    <a href="https://www.instagram.com/paspiazus/" target='_blank'>
+                    <a href="https://www.instagram.com/paspiazus/" target='_blank' onClick={() => setMenu(!menu)}>
                         <img className='header-menu-three' src="/image/instagram-ico.png" alt="icono de instagram" />
                     </a>
                 </div>
