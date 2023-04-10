@@ -4,12 +4,12 @@ import { useSwiperSlide } from "swiper/react";
 const infoWorkOne = [
     {
         title: 'Proyecto para EJC',
-        description: 'Este sitio web lo realice con NextJS y Material UI',
+        description: 'Este sitio web lo realice con NextJS, TypeScript y Material UI',
         link: 'https://www.ejc-home.com/'
     },
     {
         title: 'Plantilla web moderna',
-        description: 'Este sitio web lo realice con NextJS y css',
+        description: 'Este sitio web lo realice con NextJS, TypeScript y css',
         link: 'https://plantilla-moderna.vercel.app/'
     }
 ]
@@ -17,12 +17,12 @@ const infoWorkOne = [
 const infoWorkTwo = [
     {
         title: 'Proyecto de TodoApp',
-        description: 'Esta aplicación web la realice con NextJS y css',
+        description: 'Esta aplicación web la realice con NextJS, TypeScript y css',
         link: 'https://todo-app-gules-eta.vercel.app/'
     },
     {
         title: 'Mi Sitio Web',
-        description: 'Este sitio web lo realice con NextJS y Material UI',
+        description: 'Este sitio web lo realice con NextJS, TypeScript y Material UI',
         link: 'https://aspiazutechnology.vercel.app/'
     },
 ]
