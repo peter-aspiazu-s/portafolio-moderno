@@ -18,7 +18,7 @@ const infoWorkTwo = [
     {
         title: 'Proyecto de TodoApp',
         description: 'Esta aplicación web la realice con NextJS, TypeScript y css',
-        link: 'https://todo-app-gules-eta.vercel.app/'
+        link: 'https://aspiazu-todo-app.vercel.app/'
     },
     {
         title: 'Mi Sitio Web',
