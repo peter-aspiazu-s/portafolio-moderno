@@ -2,24 +2,33 @@ import {FC, useState} from 'react';
 import { useSwiperSlide } from "swiper/react";
 
 const infoWorkOne = [
+    
+    {
+        title: 'Proyecto de Journal App',
+        description: 'Esta aplicación Web en proceso, la estoy realizando con Next JS y firebase',
+        link: 'https://journal-app-con-next.vercel.app/'
+    },
     {
         title: 'Proyecto para EJC',
         description: 'Este sitio web lo realice con NextJS, TypeScript y Material UI',
         link: 'https://www.ejc-home.com/'
     },
+]
+
+const infoWorkTwo = [
     {
         title: 'Plantilla web moderna',
         description: 'Este sitio web lo realice con NextJS, TypeScript y css',
         link: 'https://plantilla-moderna.vercel.app/'
-    }
-]
-
-const infoWorkTwo = [
+    },
     {
         title: 'Proyecto de TodoApp',
         description: 'Esta aplicación web la realice con NextJS, TypeScript y css',
         link: 'https://aspiazu-todo-app.vercel.app/'
     },
+]
+
+const infoWorkThree = [
     {
         title: 'Mi Sitio Web',
         description: 'Este sitio web lo realice con NextJS, TypeScript y Material UI',
@@ -49,6 +58,10 @@ export const Work: FC<Props> = ({setActive}) => {
         setWork(infoWorkTwo)
     }
 
+    const handleClickWorkThree = () => {
+        setWork(infoWorkThree)
+    }
+
   return (
     <div className='work'>
         {/* <div className='work-title'>Mis Proyectos</div> */}
@@ -69,6 +82,7 @@ export const Work: FC<Props> = ({setActive}) => {
         <div className='wrok-container-state'>
             <button onClick={handleClickWorkOne} className={work === infoWorkOne ? 'work-container-btn-active' : 'work-container-btn'}>1</button>
             <button onClick={handleClickWorkTwo} className={work === infoWorkTwo ? 'work-container-btn-active' : 'work-container-btn'}>2</button>
+            <button onClick={handleClickWorkThree} className={work === infoWorkThree ? 'work-container-btn-active' : 'work-container-btn'}>3</button>
         </div>
     </div>
   )
