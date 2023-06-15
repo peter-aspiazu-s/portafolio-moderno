@@ -31,8 +31,8 @@ const infoWorkTwo = [
 const infoWorkThree = [
     {
         title: 'Mi Sitio Web',
-        description: 'Este sitio web lo realice con NextJS, TypeScript y Material UI',
-        link: 'https://aspiazutechnology.vercel.app/'
+        description: 'Este sitio web lo realice con NextJS, TypeScript y CSS3',
+        link: 'https://aspiazu-technology.vercel.app/'
     },
 ]
 
