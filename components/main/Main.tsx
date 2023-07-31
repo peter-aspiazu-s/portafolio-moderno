@@ -18,7 +18,7 @@ export const Main: FC<Props> = ({setActive}) => {
     <div className='main' id='animationScroll'>
         <div className='main-container-info'>
             <div className='main-container-info-title'>Desarrollador Web Frontend</div>
-            <div className='main-container-info-description'>¡Hola! me apasiona desarrollar interfaces de usuario y cuento con experiencia en <strong>javascript, css, html, typescript, git y firebase.</strong> Todos los conocimientos que he adquirido los aplico en <strong>Next js</strong>, el framework que elijo para mis proyectos de desarrollo.</div>
+            <div className='main-container-info-description'>¡Hola! me apasiona desarrollar interfaces de usuario y cuento con experiencia en <strong>javascript, css, html, typescript, git, firebase, node js y MySQL/MariaDB.</strong> Todos los conocimientos que he adquirido los aplico en <strong>Next js</strong>, el framework que elijo para mis proyectos de desarrollo.</div>
         </div>
         <div className='main-container-img'>
             <div className='main-container-img-perfil'>
