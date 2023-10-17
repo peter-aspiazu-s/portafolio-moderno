@@ -4,31 +4,36 @@ import { useSwiperSlide } from "swiper/react";
 const infoWorkOne = [
     
     {
-        title: 'Proyecto de E-Commerce',
-        description: 'Esta aplicación Web la desarrolle con Next JS(React, Node), Material UI, Next Auth, MongoDB.',
+        title: 'E-Commerce',
+        description: 'Esta aplicación Web la desarrolle con Next JS, Material UI, Next Auth, MongoDB.',
         link: 'https://aspiazu-shop.vercel.app/'
     },
     {
-        title: 'Proyecto de Journal App',
-        description: 'Esta aplicación Web en proceso, la estoy realizando con Next JS y firebase',
-        link: 'https://journal-app-con-next.vercel.app/'
+        title: 'Rosari Construction',
+        description: 'Desarrollado con NextJS, uso de hooks, css, manipulación del DOM, funciones en backend para el formulario, encuesta y almaceno los datos en mysql.',
+        link: 'https://rosari-construction-inc.vercel.app/'
     }
 ]
 
 const infoWorkTwo = [
     {
+        title: 'Proyecto de Journal App',
+        description: 'Esta aplicación Web en proceso, la estoy realizando con Next JS y firebase',
+        link: 'https://journal-app-con-next.vercel.app/'
+    },
+    {
         title: 'Proyecto para EJC',
         description: 'Este sitio web lo realice con NextJS, TypeScript y Material UI',
         link: 'https://www.ejc-home.com/'
-    },
-    {
-        title: 'Mi Sitio Web',
-        description: 'Este sitio web lo realice con NextJS, TypeScript y CSS3',
-        link: 'https://aspiazu-technology.vercel.app/'
     }
 ]
 
 const infoWorkThree = [
+    {
+        title: 'Mi Sitio Web',
+        description: 'Este sitio web lo realice con NextJS, TypeScript y CSS3',
+        link: 'https://aspiazu-technology.vercel.app/'
+    },
     {
         title: 'Proyecto de TodoApp',
         description: 'Esta aplicación web la realice con NextJS, TypeScript y css',
