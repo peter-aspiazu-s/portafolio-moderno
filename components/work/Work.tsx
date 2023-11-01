@@ -17,9 +17,9 @@ const infoWorkOne = [
 
 const infoWorkTwo = [
     {
-        title: 'Proyecto de Journal App',
-        description: 'Esta aplicación Web en proceso, la estoy realizando con Next JS y firebase',
-        link: 'https://journal-app-con-next.vercel.app/'
+        title: 'Proyecto de TodoApp',
+        description: 'Esta aplicación web la realice con NextJS, TypeScript, firebase y material UI',
+        link: 'https://todo-app-advance.vercel.app/'
     },
     {
         title: 'Proyecto para EJC',
@@ -35,9 +35,9 @@ const infoWorkThree = [
         link: 'https://aspiazu-technology.vercel.app/'
     },
     {
-        title: 'Proyecto de TodoApp',
-        description: 'Esta aplicación web la realice con NextJS, TypeScript y css',
-        link: 'https://aspiazu-todo-app.vercel.app/'
+        title: 'Proyecto de Journal App',
+        description: 'Esta aplicación Web en proceso, la estoy realizando con Next JS y firebase',
+        link: 'https://journal-app-con-next.vercel.app/'
     },
 ]
 
