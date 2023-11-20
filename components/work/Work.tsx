@@ -24,7 +24,7 @@ const infoWorkTwo = [
     {
         title: 'Proyecto para EJC',
         description: 'Este sitio web lo realice con NextJS, TypeScript y Material UI',
-        link: 'https://www.ejc-home.com/'
+        link: 'https://ejc.vercel.app/'
     }
 ]
 
