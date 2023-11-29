@@ -5,38 +5,38 @@ const infoWorkOne = [
     
     {
         title: 'E-Commerce',
-        description: 'Esta aplicación Web la desarrolle con Next JS, Material UI, Next Auth, MongoDB.',
+        description: 'I developed this web application using Next.js, Material UI, Next Auth, and MongoDB.',
         link: 'https://aspiazu-shop.vercel.app/'
     },
     {
         title: 'Rosari Construction',
-        description: 'Desarrollado con NextJS, uso de hooks, css, manipulación del DOM, funciones en backend para el formulario, encuesta y almaceno los datos en mysql.',
+        description: 'Developed with Next.js, use of hooks, CSS, DOM manipulation, backend functions for the form, survey, and data storage in MySQL.',
         link: 'https://rosari-construction-inc.vercel.app/'
     }
 ]
 
 const infoWorkTwo = [
     {
-        title: 'Proyecto de TodoApp',
-        description: 'Esta aplicación web la realice con NextJS, TypeScript, firebase y material UI',
+        title: 'TodoApp Project',
+        description: 'I built this web application using Next.js, TypeScript, Firebase, and Material UI.',
         link: 'https://todo-app-advance.vercel.app/'
     },
     {
-        title: 'Proyecto para EJC',
-        description: 'Este sitio web lo realice con NextJS, TypeScript y Material UI',
+        title: 'Project for EJC',
+        description: 'I built this website using Next.js, TypeScript, and Material UI.',
         link: 'https://www.ejc-home.com/'
     }
 ]
 
 const infoWorkThree = [
     {
-        title: 'Mi Sitio Web',
-        description: 'Este sitio web lo realice con NextJS, TypeScript y CSS3',
+        title: 'My Website',
+        description: 'I built this website using Next.js, TypeScript, and CSS3.',
         link: 'https://aspiazu-technology.vercel.app/'
     },
     {
-        title: 'Proyecto de Journal App',
-        description: 'Esta aplicación Web en proceso, la estoy realizando con Next JS y firebase',
+        title: 'Journal App Project',
+        description: 'This web application in progress is being developed using Next.js and Firebase.',
         link: 'https://journal-app-con-next.vercel.app/'
     },
 ]
@@ -77,7 +77,7 @@ export const Work: FC<Props> = ({setActive}) => {
                     <div className='work-container-description'>{w.description}</div>
                     <a href={w.link} target='_blank' className='work-container-box'>
                         <div className='work-container-box-info'>
-                            <div>ver proyecto</div>
+                            <div>See project</div>
                             <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 96 960 960" width="48"><path d="m702 755-43-42 106-106H120v-60h646L660 441l42-42 178 178-178 178Z"/></svg>
                         </div>
                     </a>

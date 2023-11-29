@@ -36,7 +36,7 @@ export const Form: FC<Props> = ({setActive}) => {
         e.preventDefault();
 
         if(isFormValid()){
-            console.log('Enviando...');
+            console.log('Sending...');
 
             setTouchedName( false );
             setTouchedEmail( false );
@@ -60,14 +60,14 @@ export const Form: FC<Props> = ({setActive}) => {
                   Swal.fire({
                     position: 'top-end',
                     icon: 'success',
-                    title: 'Enviado con éxito!',
+                    title: 'Sent successfully!',
                     showConfirmButton: false,
                     timer: 1500
                   })
                 }
               }).catch((error) => {
                 console.log(error)
-                console.log('algo salió mal')
+                console.log('Something went wrong')
               })
         }
     }
@@ -77,7 +77,7 @@ export const Form: FC<Props> = ({setActive}) => {
             Swal.fire({
                 position: 'top-end',
                 icon: 'error',
-                title: 'El nombre es requerido',
+                title: 'The name is required',
                 showConfirmButton: false,
                 timer: 1500
               })
@@ -86,7 +86,7 @@ export const Form: FC<Props> = ({setActive}) => {
                 Swal.fire({
                     position: 'top-end',
                     icon: 'error',
-                    title: 'El email es requerido',
+                    title: 'The email is required',
                     showConfirmButton: false,
                     timer: 1500
                 })
@@ -95,7 +95,7 @@ export const Form: FC<Props> = ({setActive}) => {
                 Swal.fire({
                     position: 'top-end',
                     icon: 'error',
-                    title: 'El mensaje es requerido y debe tener al menos 10 caracteres',
+                    title: 'The message is required and must have at least 10 characters',
                     showConfirmButton: false,
                     timer: 2000
                 })
@@ -107,47 +107,47 @@ export const Form: FC<Props> = ({setActive}) => {
   return (
     <div className='form'>
         <div className='form-container-text'>
-            <div>Formulario de Contacto</div>
-            <div>Llena el formulario y envíame un correo</div>
+            <div>Contact Form</div>
+            <div>Fill out the form and send me an email.</div>
         </div>
         <div className='form-container-formulario'>
             <form onSubmit={handleSubmit}>
                 <div className='form-container-formulario-input-text'>
-                    <label htmlFor="name">Tú nombre</label> <br />
+                    <label htmlFor="name">Your name</label> <br />
                     <input 
                         type="text" 
                         name='name' 
                         id='name' 
                         value={name}
                         onChange={onInputChange}
-                        placeholder='Nombre' 
+                        placeholder='name' 
                         className={name.length <= 0 && touchedName ? 'input-or-textarea-error' : ''}
                         onBlur={() => setTouchedName(true)}
                     />
                 </div>
 
                 <div className='form-container-formulario-input-email'>
-                    <label htmlFor="email">Tú correo</label> <br />
+                    <label htmlFor="email">Your email</label> <br />
                     <input 
                         type="email" 
                         name='email' 
                         id='email' 
                         value={email}
                         onChange={onInputChange}
-                        placeholder='Correo' 
+                        placeholder='email' 
                         className={email.length <= 0 && touchedEmail ? 'input-or-textarea-error' : ''}
                         onBlur={() => setTouchedEmail(true)}
                     />
                 </div>
                 
                 <div className='form-container-formulario-textarea'>
-                    <label htmlFor="message">Tú Mensaje</label> <br />
+                    <label htmlFor="message">Your Message</label> <br />
                     <textarea 
                         name='message' 
                         id='message' 
                         value={message}
                         onChange={onInputChange}
-                        placeholder='Coloca tu mensaje' 
+                        placeholder='Enter your message' 
                         rows={5} 
                         className={message.length <= 0 && touchedMessage ? 'input-or-textarea-error' : ''}
                         onBlur={() => setTouchedMessage(true)}
@@ -158,7 +158,7 @@ export const Form: FC<Props> = ({setActive}) => {
                     btnForm
                     ? <div className="lds-ring"><div></div><div></div><div></div><div></div></div>
                     : <button type='submit'>
-                        <div>Enviar</div>
+                        <div>Send</div>
                         <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 96 960 960" width="48"><path d="m702 755-43-42 106-106H120v-60h646L660 441l42-42 178 178-178 178Z"/></svg>
                     </button>
                 }

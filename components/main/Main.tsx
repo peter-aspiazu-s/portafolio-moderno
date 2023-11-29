@@ -5,6 +5,9 @@ interface Props {
     setActive: (active: boolean) => void;
 }
 
+const text1 = "Hi! I'm passionate about developing user interfaces and I have experience in";
+const text2 = "I apply all the knowledge I've acquired in";
+
 export const Main: FC<Props> = ({setActive}) => {
 
     const swiperSlide = useSwiperSlide();
@@ -17,8 +20,8 @@ export const Main: FC<Props> = ({setActive}) => {
   return (
     <div className='main' id='animationScroll'>
         <div className='main-container-info'>
-            <div className='main-container-info-title'>Desarrollador Web Frontend</div>
-            <div className='main-container-info-description'>¡Hola! me apasiona desarrollar interfaces de usuario y cuento con experiencia en <strong>javascript, css, html, typescript, git, firebase, node js y MySQL/MariaDB.</strong> Todos los conocimientos que he adquirido los aplico en <strong>Next js</strong>, el framework que elijo para mis proyectos de desarrollo.</div>
+            <div className='main-container-info-title'>Frontend Web Developer</div>
+            <div className='main-container-info-description'>{text1} <strong>JavaScript, CSS, HTML, TypeScript, Git, Firebase, Node.js, and MySQL/MariaDB.</strong> {text2} <strong>Next js</strong>, the framework I choose for my development projects.</div>
         </div>
         <div className='main-container-img'>
             <div className='main-container-img-perfil'>

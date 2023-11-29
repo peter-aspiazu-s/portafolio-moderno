@@ -32,11 +32,11 @@ export const Footer: FC<Props> = ({
             </div>
 
             <div className='footer-container-section'>
-                <div onClick={handleClickItemOne}>Resumen</div>
+                <div onClick={handleClickItemOne}>Summary</div>
 
-                <div onClick={handleClickItemTwo}>Trabajos</div>
+                <div onClick={handleClickItemTwo}>Jobs</div>
 
-                <div onClick={handleClickItemThree}>Contactar</div>
+                <div onClick={handleClickItemThree}>Contact</div>
             </div>
 
             <div className='footer-container-copy'>

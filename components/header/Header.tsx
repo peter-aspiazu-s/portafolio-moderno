@@ -74,11 +74,11 @@ export const Header: FC<Props> = ({
             menu &&
             <div className='header-menu'>
                 <div className='header-menu-items'>
-                <div onClick={handleClickResumen}>Resumen</div>
+                <div onClick={handleClickResumen}>Summary</div>
 
-                <div onClick={handleClickTrabajos}>Trabajos</div>
+                <div onClick={handleClickTrabajos}>Jobs</div>
 
-                <div onClick={handleClickContactar}>Contactar</div>
+                <div onClick={handleClickContactar}>Contact</div>
                 </div>
                 <div className='header-menu-redes'>
                     <a href="https://github.com/peter-aspiazu-s" target='_blank' onClick={() => setMenu(!menu)}>
