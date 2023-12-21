@@ -22,18 +22,26 @@ const infoWorkTwo = [
         link: 'https://todo-app-advance.vercel.app/'
     },
     {
-        title: 'Project for EJC',
-        description: 'I built this website using Next.js, TypeScript, and Material UI.',
-        link: 'https://www.ejc-home.com/'
+        title: 'King Clean Project',
+        description: 'Developed with Next.js, use of hooks, CSS animation, DOM manipulation, backend functions for the form and survey.',
+        link: 'https://king-clean.vercel.app/'
     }
 ]
 
 const infoWorkThree = [
     {
+        title: 'Project for EJC',
+        description: 'I built this website using Next.js, TypeScript, and Material UI.',
+        link: 'https://www.ejc-home.com/'
+    },
+    {
         title: 'My Website',
         description: 'I built this website using Next.js, TypeScript, and CSS3.',
         link: 'https://aspiazu-technology.vercel.app/'
     },
+]
+
+const infoWorkFour = [
     {
         title: 'Journal App Project',
         description: 'This web application in progress is being developed using Next.js and Firebase.',
@@ -67,6 +75,10 @@ export const Work: FC<Props> = ({setActive}) => {
         setWork(infoWorkThree)
     }
 
+    const handleClickWorkFour = () => {
+        setWork(infoWorkFour)
+    }
+
   return (
     <div className='work'>
         {/* <div className='work-title'>Mis Proyectos</div> */}
@@ -88,6 +100,7 @@ export const Work: FC<Props> = ({setActive}) => {
             <button onClick={handleClickWorkOne} className={work === infoWorkOne ? 'work-container-btn-active' : 'work-container-btn'}>1</button>
             <button onClick={handleClickWorkTwo} className={work === infoWorkTwo ? 'work-container-btn-active' : 'work-container-btn'}>2</button>
             <button onClick={handleClickWorkThree} className={work === infoWorkThree ? 'work-container-btn-active' : 'work-container-btn'}>3</button>
+            <button onClick={handleClickWorkFour} className={work === infoWorkFour ? 'work-container-btn-active' : 'work-container-btn'}>4</button>
         </div>
     </div>
   )
