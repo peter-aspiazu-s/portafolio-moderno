@@ -17,9 +17,9 @@ const infoWorkOne = [
 
 const infoWorkTwo = [
     {
-        title: 'TodoApp Project',
-        description: 'I built this web application using Next.js, TypeScript, Firebase, and Material UI.',
-        link: 'https://todo-app-advance.vercel.app/'
+        title: 'Project Journal App',
+        description: 'I made this web application with React and used tools like redux, firebase, cloudinary and material UI.',
+        link: 'https://journal-app-sigma.vercel.app/'
     },
     {
         title: 'King Clean Project',
@@ -30,23 +30,23 @@ const infoWorkTwo = [
 
 const infoWorkThree = [
     {
+        title: 'TodoApp Project',
+        description: 'I built this web application using Next.js, TypeScript, Firebase, and Material UI.',
+        link: 'https://todo-app-advance.vercel.app/'
+    },
+    {
         title: 'Project for EJC',
         description: 'I built this website using Next.js, TypeScript, and Material UI.',
         link: 'https://www.ejc-home.com/'
-    },
-    {
-        title: 'My Website',
-        description: 'I built this website using Next.js, TypeScript, and CSS3.',
-        link: 'https://aspiazu-technology.vercel.app/'
     },
 ]
 
 const infoWorkFour = [
     {
-        title: 'Journal App Project',
-        description: 'This web application in progress is being developed using Next.js and Firebase.',
-        link: 'https://journal-app-con-next.vercel.app/'
-    },
+        title: 'My Website',
+        description: 'I built this website using Next.js, TypeScript, and CSS3.',
+        link: 'https://aspiazu-technology.vercel.app/'
+    }
 ]
 
 interface Props {
