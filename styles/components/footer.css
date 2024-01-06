@@ -27,19 +27,19 @@
 }
 
 .footer-container-contact div{
-    font-size: 20px;
+    font-size: 18px;
     color: aliceblue;
     letter-spacing: 2px;
     font-weight: 600;
     opacity: 0.7;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     text-align: left;
 }
 
 .footer-container-contact a{
     text-align: left;
     color: aliceblue;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 
@@ -49,13 +49,13 @@
     flex-direction: column;
     justify-content: center;
     align-items: flex-start;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 
 .footer-container-section div{
-    font-size: 20px;
+    font-size: 18px;
     color: aliceblue;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
 }
 
 .footer-container-copy{
@@ -63,7 +63,7 @@
     margin-top: 50px;
     justify-self: flex-end;
     border-top: 1px solid aliceblue;
-    padding-top: 50px;
+    padding-top: 30px;
 }
 
 .footer-container-copy div{
@@ -91,6 +91,12 @@
 }
 
 @media screen and (min-width: 1024px){
+
+    .footer-container-contact div{
+        font-size: 20px;
+        margin-bottom: 20px;
+    }
+
     .footer-container-section div{
         cursor: pointer;
         display: inline-block;

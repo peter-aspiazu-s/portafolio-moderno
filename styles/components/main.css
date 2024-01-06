@@ -9,7 +9,8 @@
 
 .main-container-info{
     width: 100%;
-    height: 60%;
+    /* height: 60%; */
+    height: 60vh;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
@@ -20,7 +21,7 @@
 }
 
 .main-container-info-title{
-    font-size: 30px;
+    font-size: 24px;
     font-weight: 600;
     color: aliceblue;
     margin-bottom: 20px;
@@ -28,12 +29,13 @@
 
 .main-container-info-description{
     color: aliceblue;
-    font-size: 15px;
+    font-size: 14px;
 }
 
 .main-container-img{
     width: 100%;
-    height: 40%;
+    /* height: 40%; */
+    height: 40vh;
     background-color: #bff754;
     display: flex;
     flex-direction: column;
@@ -43,7 +45,7 @@
 }
 
 .main-container-img-perfil{
-    width: 200px;
+    width: 150px;
     box-shadow: 10px 10px 5px 0px aliceblue;
     position: relative;
     z-index: 1001;
@@ -110,6 +112,22 @@
     opacity: 0.5;
 }
 
+
+@media screen and (min-width: 375px){
+    
+    .main-container-info-title{
+        font-size: 26px;
+    }
+    
+    .main-container-info-description{
+        font-size: 16px;
+    }
+
+    .main-container-img-perfil{
+        width: 160px;
+    }
+}
+
 @media screen and (min-width: 768px){
 
     .main{
@@ -124,6 +142,7 @@
 
     .main-container-info-title{
         width: 400px;
+        font-size: 28px;
     }
     
     .main-container-info-description{
@@ -138,6 +157,7 @@
     .main-container-img-perfil{
         position: absolute;
         left: -50px;
+        width: 180px;
     }
 
     .main-container-img-html{

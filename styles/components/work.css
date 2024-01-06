@@ -16,7 +16,7 @@
 
 .work-container{
     width: 90%;
-    padding: 40px 30px;
+    padding: 25px 30px;
     background-color: aliceblue;
     border-bottom: 1px solid #4831d4;
     display: flex;
@@ -28,14 +28,14 @@
 .work-container-title{
     text-align: left;
     color: #4831d4;
-    font-size: 20px;
+    font-size: 18px;
     margin-bottom: 5px;
 }
 
 .work-container-description{
     text-align: left;
-    font-size: 15px;
-    margin-bottom: 25px;
+    font-size: 12px;
+    margin-bottom: 15px;
 }
 
 .work-container-box{
@@ -53,7 +53,7 @@
 }
 
 .work-container-box-info div{
-    font-size: 15px;
+    font-size: 14px;
     color: #4831d4;
 }
 
@@ -72,7 +72,7 @@
 }
 
 .wrok-container-state button{
-    padding: 10px;
+    padding: 5px;
 }
 
 .work-container-btn{
@@ -89,6 +89,31 @@
     transition: all .3s;
 }
 
+@media screen and (min-width: 375px){
+    .work-container{
+        padding: 30px 30px;
+    }
+}
+
+@media screen and (min-width: 375px){
+    .work-container{
+        padding: 30px 30px;
+    }
+
+    .work-container-title{
+        font-size: 20px;
+    }
+    
+    .work-container-description{
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
+
+    .wrok-container-state button{
+        padding: 5px;
+    }
+}
+
 @media screen and (min-width: 768px){
     .work{
         flex-direction: row;
@@ -100,6 +125,7 @@
         width: 50%;
         height: 300px;
         border-bottom: 0;
+        padding: 40px 30px;
     }
     .work-container:nth-child(1){
         border-right: 1px solid #4831d4;
@@ -107,6 +133,19 @@
 
     .wrok-container-state {
         margin-top: -100px;
+    }
+
+    .work-container-title{
+        font-size: 25px;
+    }
+    
+    .work-container-description{
+        font-size: 16px;
+        margin-bottom: 25px;
+    }
+
+    .wrok-container-state button{
+        padding: 10px;
     }
 }
 
