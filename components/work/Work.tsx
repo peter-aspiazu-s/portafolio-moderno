@@ -5,8 +5,8 @@ const infoWorkOne = [
     
     {
         title: 'E-Commerce',
-        description: 'I developed this web application using Next.js, Material UI, Next Auth, and MongoDB.',
-        link: 'https://aspiazu-shop.vercel.app/'
+        description: 'I developed this web application using Next.js, Tailwin, Next Auth, and Postgresql.',
+        link: 'https://tienda-aspiazu.vercel.app/'
     },
     {
         title: 'Rosari Construction',
@@ -22,17 +22,17 @@ const infoWorkTwo = [
         link: 'https://journal-app-sigma.vercel.app/'
     },
     {
-        title: 'King Clean Project',
-        description: 'Developed with Next.js, use of hooks, CSS animation, DOM manipulation, backend functions for the form and survey.',
-        link: 'https://king-clean.vercel.app/'
-    }
+        title: 'Fox Exterior Solutions',
+        description: 'Business website with Next js.',
+        link: 'https://foxexteriorsolutionswny.com/'
+    },
 ]
 
 const infoWorkThree = [
     {
-        title: 'TodoApp Project',
-        description: 'I built this web application using Next.js, TypeScript, Firebase, and Material UI.',
-        link: 'https://todo-app-advance.vercel.app/'
+        title: 'King Clean Project',
+        description: 'Developed with Next.js, use of hooks, CSS animation, DOM manipulation, backend functions for the form and survey.',
+        link: 'https://king-clean.vercel.app/'
     },
     {
         title: 'Project for EJC',
