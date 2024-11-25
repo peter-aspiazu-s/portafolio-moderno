@@ -17,9 +17,9 @@ const infoWorkOne = [
 
 const infoWorkTwo = [
     {
-        title: 'Project Journal App',
-        description: 'I made this web application with React and used tools like redux, firebase, cloudinary and material UI.',
-        link: 'https://journal-app-sigma.vercel.app/'
+        title: 'Project Local Library',
+        description: 'This project is based on the Mozilla MDN tutorial, using Express with the MVC pattern and Mongoose to interact with MongoDB. Currently, I am working on the login system and planning to migrate from Pug to React or possibly Next.js.',
+        link: 'https://local-library-production-fdf6.up.railway.app/catalog'
     },
     {
         title: 'Fox Exterior Solutions',
@@ -30,18 +30,23 @@ const infoWorkTwo = [
 
 const infoWorkThree = [
     {
+        title: 'Project Journal App',
+        description: 'I made this web application with React and used tools like redux, firebase, cloudinary and material UI.',
+        link: 'https://journal-app-sigma.vercel.app/'
+    },
+    {
         title: 'King Clean Project',
         description: 'Developed with Next.js, use of hooks, CSS animation, DOM manipulation, backend functions for the form and survey.',
         link: 'https://king-clean.vercel.app/'
     },
+]
+
+const infoWorkFour = [
     {
         title: 'Project for EJC',
         description: 'I built this website using Next.js, TypeScript, and Material UI.',
         link: 'https://www.ejc-home.com/'
     },
-]
-
-const infoWorkFour = [
     {
         title: 'My Website',
         description: 'I built this website using Next.js, TypeScript, and CSS3.',
