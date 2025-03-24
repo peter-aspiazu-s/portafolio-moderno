@@ -16,10 +16,13 @@ import { Main } from '../main';
 import { Work } from '../work';
 import { Form } from '../form';
 import { Footer } from '../footer';
+import { Certifications } from '../certifications/Certifications';
+import Image from 'next/image';
 
 const Portfolio: FC = () => {
 
   const [ active, setActive ] = useState(false);
+  const [ icon, setIcon ] = useState(false);
 
   const handleClickItemOne = () => {
     const element = document.getElementsByClassName('swiper-pagination-bullet')[0] as HTMLElement;
@@ -34,6 +37,15 @@ const Portfolio: FC = () => {
       element.click();
   }
 
+  const handleClickItemFour = () => {
+      const element = document.getElementsByClassName('swiper-pagination-bullet')[3] as HTMLElement;
+      element.click();
+  }
+
+  const handleClickIcon = () => {
+    setIcon(!icon);
+  }
+
   return (
     <>
       <Header 
@@ -41,6 +53,9 @@ const Portfolio: FC = () => {
         handleClickItemOne={handleClickItemOne}
         handleClickItemTwo={handleClickItemTwo}
         handleClickItemThree={handleClickItemThree}
+        handleClickItemFour={handleClickItemFour}
+        handleClickIcon={handleClickIcon}
+        icon={icon}
       />
       <Swiper
         direction={"vertical"}
@@ -54,23 +69,30 @@ const Portfolio: FC = () => {
         className="mySwiper"
       >
         <SwiperSlide data-hash="slide1">
-          <Main setActive={setActive} />
+          <Main setActive={setActive} icon={icon} />
         </SwiperSlide>
         <SwiperSlide data-hash="slide2">
-          <Work setActive={setActive} />
+          <Work setActive={setActive} icon={icon} />
         </SwiperSlide>
         <SwiperSlide data-hash="slide3">
-          <Form setActive={setActive} />
+          <Form setActive={setActive} icon={icon} />
         </SwiperSlide>
-        <SwiperSlide data-hash="slide3">
+        <SwiperSlide data-hash="slide4">
+          <Certifications setActive={setActive} icon={icon} />
+        </SwiperSlide>
+        <SwiperSlide data-hash="slide5">
           <Footer 
             setActive={setActive} 
             handleClickItemOne={handleClickItemOne}
             handleClickItemTwo={handleClickItemTwo}
             handleClickItemThree={handleClickItemThree}
+            icon={icon}
           />
         </SwiperSlide>
       </Swiper>
+      <a href={icon ? "https://wa.link/iyespw" : "https://wa.link/8u26zk"} target='_blank' className='whatsapp'>
+                <Image src="/image/whatsapp.png" alt="" layout="fill" />
+            </a>
     </>
   )
 }

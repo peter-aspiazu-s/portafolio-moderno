@@ -3,12 +3,11 @@ import { useSwiperSlide } from "swiper/react";
 
 interface Props {
     setActive: (active: boolean) => void;
+    icon: boolean;
 }
 
-const text1 = "Hi! I'm passionate about developing user interfaces and I have experience in";
-const text2 = "I apply all the knowledge I've acquired in";
 
-export const Main: FC<Props> = ({setActive}) => {
+export const Main: FC<Props> = ({setActive, icon}) => {
 
     const swiperSlide = useSwiperSlide();
 
@@ -20,8 +19,14 @@ export const Main: FC<Props> = ({setActive}) => {
   return (
     <div className='main' id='animationScroll'>
         <div className='main-container-info'>
-            <div className='main-container-info-title'>Frontend Web Developer</div>
-            <div className='main-container-info-description'>{text1} <strong>JavaScript, CSS, HTML, TypeScript, Git, Firebase, Node.js, and MySQL/MariaDB.</strong> {text2} <strong>Next js</strong>, the framework I choose for my development projects.</div>
+            <div className='main-container-info-title'>{icon ? "Desarrollador Web" : "Web developer"}</div>
+            <div className='main-container-info-description'>
+                {
+                    icon
+                    ? (<>Soy un apasionado de la tecnología, mis principales lenguajes para desarrollar proyectos web son <strong> Javascript, Css Y Html</strong>, también utilizo <strong>React, Nextjs, Nodejs y Elementor Pro en Wordpress</strong> para sitios web administrables de forma sencilla y agradable, para bases de datos suelo usar Prisma con Postgresql.</>)
+                    : (<>I am passionate about technology. My main languages for developing web projects are <strong>JavaScript, CSS, and HTML</strong>. I also use <strong>React, Next.js, Node.js, and Elementor Pro in WordPress</strong> to create websites that are easy and pleasant to manage. For databases, I usually work with Prisma and PostgreSQL.</>)
+                }
+            </div>
         </div>
         <div className='main-container-img'>
             <div className='main-container-img-perfil'>

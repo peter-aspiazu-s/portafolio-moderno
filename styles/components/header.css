@@ -28,6 +28,16 @@
     color: #4831d4;
 }
 
+.header-icon-paises{
+    position: fixed;
+    top: 35px;
+    right: 100px;
+    z-index: 1001;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+
 .header-button{
     display: flex;
     flex-direction: column;
@@ -139,6 +149,10 @@
         padding: 0 60px;
     }
 
+    .header-icon-paises{
+        right: 140px;
+    }
+
     .header-menu{
         top: 20px;
         left: auto;
@@ -221,6 +235,10 @@
 
     .header-name{
         font-size: 30px;
+    }
+
+    .header-icon-paises{
+        right: 180px;
     }
 
     .header-menu{

@@ -6,9 +6,10 @@ import Swal from 'sweetalert2'
 
 interface Props {
     setActive: (active: boolean) => void;
+    icon: boolean;
 }
 
-export const Form: FC<Props> = ({setActive}) => {
+export const Form: FC<Props> = ({setActive, icon}) => {
 
     const swiperSlide = useSwiperSlide();
 
@@ -107,13 +108,13 @@ export const Form: FC<Props> = ({setActive}) => {
   return (
     <div className='form'>
         <div className='form-container-text'>
-            <div>Contact Form</div>
-            <div>Fill out the form and send me an email.</div>
+            <div>{icon ? "Formulario de contacto" : "Contact Form"}</div>
+            <div>{icon ? "Rellena el formulario y envíame un correo electrónico." : "Fill out the form and send me an email."}</div>
         </div>
         <div className='form-container-formulario'>
             <form onSubmit={handleSubmit}>
                 <div className='form-container-formulario-input-text'>
-                    <label htmlFor="name">Your name</label> <br />
+                    <label htmlFor="name">{icon ? "Tu nombre" : "Your name"}</label> <br />
                     <input 
                         type="text" 
                         name='name' 
@@ -127,7 +128,7 @@ export const Form: FC<Props> = ({setActive}) => {
                 </div>
 
                 <div className='form-container-formulario-input-email'>
-                    <label htmlFor="email">Your email</label> <br />
+                    <label htmlFor="email">{icon ? "Tu correo" : "Your email"}</label> <br />
                     <input 
                         type="email" 
                         name='email' 
@@ -141,7 +142,7 @@ export const Form: FC<Props> = ({setActive}) => {
                 </div>
                 
                 <div className='form-container-formulario-textarea'>
-                    <label htmlFor="message">Your Message</label> <br />
+                    <label htmlFor="message">{icon ? "Tu mensaje" : "Your Message"}</label> <br />
                     <textarea 
                         name='message' 
                         id='message' 
@@ -158,7 +159,7 @@ export const Form: FC<Props> = ({setActive}) => {
                     btnForm
                     ? <div className="lds-ring"><div></div><div></div><div></div><div></div></div>
                     : <button type='submit'>
-                        <div>Send</div>
+                        <div>{icon ? "Enviar" : "Send"}</div>
                         <svg xmlns="http://www.w3.org/2000/svg" height="48" viewBox="0 96 960 960" width="48"><path d="m702 755-43-42 106-106H120v-60h646L660 441l42-42 178 178-178 178Z"/></svg>
                     </button>
                 }

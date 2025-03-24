@@ -1,3 +1,4 @@
+import Image from 'next/image';
 import {FC, useState} from 'react';
 
 interface Props {
@@ -5,6 +6,9 @@ interface Props {
     handleClickItemOne: () => void;
     handleClickItemTwo: () => void;
     handleClickItemThree: () => void;
+    handleClickItemFour: () => void;
+    handleClickIcon: () => void;
+    icon: boolean;
 }
 
 
@@ -12,7 +16,10 @@ export const Header: FC<Props> = ({
     active,
     handleClickItemOne,
     handleClickItemTwo,
-    handleClickItemThree
+    handleClickItemThree,
+    handleClickItemFour,
+    handleClickIcon,
+    icon
 }) => {
 
     const [ menu, setMenu ] = useState(false);
@@ -37,6 +44,11 @@ export const Header: FC<Props> = ({
         setMenu(!menu);
     }
 
+    const handleClickCertificaciones = () => {
+        handleClickItemFour();
+        setMenu(!menu);
+    }
+
   return (
     <div className='header'>
         {
@@ -55,6 +67,14 @@ export const Header: FC<Props> = ({
                 }>Peter Aspiazu</div>
         }
 
+        <div className='header-icon-paises'>
+            {
+                icon 
+                ? <Image src="/image/estados-unidos.png" alt='bandera de estados unidos' layout='fill' onClick={handleClickIcon} />
+                : <Image src="/image/espana.png" alt='bandera de españa' layout='fill' onClick={handleClickIcon} />
+            }
+        </div>
+
         {
             active
             ?<button className='header-button' onClick={handleClickMenu}>
@@ -69,16 +89,17 @@ export const Header: FC<Props> = ({
             </button>
         }
 
-
         {
             menu &&
             <div className='header-menu'>
                 <div className='header-menu-items'>
-                <div onClick={handleClickResumen}>Summary</div>
+                <div onClick={handleClickResumen}>{icon ? "Resumen" : "Summary" }</div>
 
-                <div onClick={handleClickTrabajos}>Jobs</div>
+                <div onClick={handleClickTrabajos}>{icon ? "Trabajos" : "Jobs" }</div>
 
-                <div onClick={handleClickContactar}>Contact</div>
+                <div onClick={handleClickContactar}>{icon ? "Contacto" : "Contact"}</div>
+
+                <div onClick={handleClickCertificaciones}>{icon ? "Certificaciones" : "Certifications"}</div>
                 </div>
                 <div className='header-menu-redes'>
                     <a href="https://github.com/peter-aspiazu-s" target='_blank' onClick={() => setMenu(!menu)}>
@@ -89,8 +110,8 @@ export const Header: FC<Props> = ({
                         <img className='header-menu-img-two' src="/image/linkedin-ico.png" alt="icono de linkedin" />
                     </a>
                     
-                    <a href="https://www.instagram.com/paspiazus/" target='_blank' onClick={() => setMenu(!menu)}>
-                        <img className='header-menu-three' src="/image/instagram-ico.png" alt="icono de instagram" />
+                    <a href="https://www.facebook.com/profile.php?id=61566286537016" target='_blank' onClick={() => setMenu(!menu)}>
+                        <img className='header-menu-three' src="/image/facebook-ico.png" alt="icono de facebook" />
                     </a>
                 </div>
             </div>
