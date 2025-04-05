@@ -40,14 +40,7 @@ export const Certifications: FC<certificationsProps> = ({ icon, setActive }) => 
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className='certifications-image'>
-                        <Image src="/image/certificado-udemy-javascript.jpg" alt="" layout="responsive"
-                        width={800}
-                        height={600} />
-                    </div>
-                </SwiperSlide>
-                <SwiperSlide>
-                    <div className='certifications-image'>
-                        <Image src="/image/certificado-udemy-html-css.jpg" alt="" layout="responsive"
+                        <Image src="/image/certificado-freecodecamp-javascript.png" alt="" layout="responsive"
                         width={800}
                         height={600} />
                     </div>
