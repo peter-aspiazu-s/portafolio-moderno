@@ -1,0 +1,37 @@
+.video-yt{
+    width: 300px;
+}
+
+@media screen and (min-width: 375px){
+    .video-yt{
+        width: 350px;
+        height: 240px;
+    }
+}
+
+@media screen and (min-width: 425px){
+    .video-yt{
+        width: 380px;
+    }
+}
+
+@media screen and (min-width: 768px){
+    .video-yt{
+        width: 600px;
+        height: 300px;
+    }
+}
+
+@media screen and (min-width: 1024px){
+    .video-yt{
+        width: 700px;
+        height: 400px;
+    }
+}
+
+@media screen and (min-width: 1440px){
+    .video-yt{
+        width: 800px;
+        height: 500px;
+    }
+}

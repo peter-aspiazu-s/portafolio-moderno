@@ -7,6 +7,7 @@ interface Props {
     handleClickItemTwo: () => void;
     handleClickItemThree: () => void;
     handleClickItemFour: () => void;
+    handleClickItemFive: () => void;
     handleClickIcon: () => void;
     icon: boolean;
 }
@@ -18,6 +19,7 @@ export const Header: FC<Props> = ({
     handleClickItemTwo,
     handleClickItemThree,
     handleClickItemFour,
+    handleClickItemFive,
     handleClickIcon,
     icon
 }) => {
@@ -44,8 +46,13 @@ export const Header: FC<Props> = ({
         setMenu(!menu);
     }
 
-    const handleClickCertificaciones = () => {
+    const handleClickTutorials = () => {
         handleClickItemFour();
+        setMenu(!menu);
+    }
+
+    const handleClickCertificaciones = () => {
+        handleClickItemFive();
         setMenu(!menu);
     }
 
@@ -93,13 +100,15 @@ export const Header: FC<Props> = ({
             menu &&
             <div className='header-menu'>
                 <div className='header-menu-items'>
-                <div onClick={handleClickResumen}>{icon ? "Resumen" : "Summary" }</div>
+                    <div onClick={handleClickResumen}>{icon ? "Resumen" : "Summary" }</div>
 
-                <div onClick={handleClickTrabajos}>{icon ? "Trabajos" : "Jobs" }</div>
+                    <div onClick={handleClickTrabajos}>{icon ? "Trabajos" : "Jobs" }</div>
 
-                <div onClick={handleClickContactar}>{icon ? "Contacto" : "Contact"}</div>
+                    <div onClick={handleClickContactar}>{icon ? "Contacto" : "Contact"}</div>
 
-                <div onClick={handleClickCertificaciones}>{icon ? "Certificaciones" : "Certifications"}</div>
+                    <div onClick={handleClickTutorials}>{icon ? "Tutoriales" : "Tutorials"}</div>
+                    
+                    <div onClick={handleClickCertificaciones}>{icon ? "Certificaciones" : "Certifications"}</div>
                 </div>
                 <div className='header-menu-redes'>
                     <a href="https://github.com/peter-aspiazu-s" target='_blank' onClick={() => setMenu(!menu)}>
@@ -111,7 +120,11 @@ export const Header: FC<Props> = ({
                     </a>
                     
                     <a href="https://www.facebook.com/profile.php?id=61566286537016" target='_blank' onClick={() => setMenu(!menu)}>
-                        <img className='header-menu-three' src="/image/facebook-ico.png" alt="icono de facebook" />
+                        <img className='header-menu-img-three' src="/image/facebook-ico.png" alt="icono de facebook" />
+                    </a>
+
+                    <a href="https://www.youtube.com/@peteraspiazu3324" target='_blank' onClick={() => setMenu(!menu)}>
+                        <img className='header-menu-img-four' src="/image/youtube-ico.png" alt="icono de youtube" />
                     </a>
                 </div>
             </div>

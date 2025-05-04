@@ -18,6 +18,7 @@ import { Form } from '../form';
 import { Footer } from '../footer';
 import { Certifications } from '../certifications/Certifications';
 import Image from 'next/image';
+import { Videos } from '../videos/Videos';
 
 const Portfolio: FC = () => {
 
@@ -42,6 +43,11 @@ const Portfolio: FC = () => {
       element.click();
   }
 
+  const handleClickItemFive = () => {
+      const element = document.getElementsByClassName('swiper-pagination-bullet')[4] as HTMLElement;
+      element.click();
+  }
+
   const handleClickIcon = () => {
     setIcon(!icon);
   }
@@ -54,6 +60,7 @@ const Portfolio: FC = () => {
         handleClickItemTwo={handleClickItemTwo}
         handleClickItemThree={handleClickItemThree}
         handleClickItemFour={handleClickItemFour}
+        handleClickItemFive={handleClickItemFive}
         handleClickIcon={handleClickIcon}
         icon={icon}
       />
@@ -78,9 +85,12 @@ const Portfolio: FC = () => {
           <Form setActive={setActive} icon={icon} />
         </SwiperSlide>
         <SwiperSlide data-hash="slide4">
-          <Certifications setActive={setActive} icon={icon} />
+          <Videos setActive={setActive} icon={icon} />
         </SwiperSlide>
         <SwiperSlide data-hash="slide5">
+          <Certifications setActive={setActive} icon={icon} />
+        </SwiperSlide>
+        <SwiperSlide data-hash="slide6">
           <Footer 
             setActive={setActive} 
             handleClickItemOne={handleClickItemOne}
