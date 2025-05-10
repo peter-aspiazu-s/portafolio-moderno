@@ -46,6 +46,11 @@ export const Videos: FC<videosProps> = ({ icon, setActive }) => {
                         <iframe className='video-yt' src="https://www.youtube.com/embed/S6RSGngESng?si=lFsSSvlKKdYLv2ev" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
                     </div>
                 </SwiperSlide>
+                <SwiperSlide>
+                    <div className='certifications-image'>
+                        <iframe className='video-yt' src="https://www.youtube.com/embed/2uof5fOi3y8?si=j0dwzL5CI09kJlIA" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
+                    </div>
+                </SwiperSlide>
             </Swiper>
         </div>
     </div>
